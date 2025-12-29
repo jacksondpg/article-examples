@@ -4,4 +4,14 @@ main {
   padding: 2rem;
   line-height: 1.6;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.divHome {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
