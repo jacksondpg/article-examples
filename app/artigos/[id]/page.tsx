@@ -12,13 +12,19 @@ export default function ArticlePage({ params }: Props) {
     notFound();
   }
 
-  return (
-    <main className="prose max-w-none p-6">
-      <h1>{article.payload.theme}</h1>
+  const themeTitle = article.payload.theme;
+  const html = article.html;
 
-      <div
-        dangerouslySetInnerHTML={{ __html: article.html }}
-      />
-    </main>
+  return (
+    <article
+      className="article itx-article intelexia-article"
+      data-theme="cdn-intelexia"
+      data-intelexia-cdn-wrapper="1"
+      itemScope
+      itemType="https://schema.org/Article"
+    >
+      {themeTitle ? <h1>{themeTitle}</h1> : null}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </article>
   );
 }
