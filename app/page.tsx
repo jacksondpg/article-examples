@@ -7,6 +7,7 @@ export default function Home() {
       {articles.map((article) => (
         <div key={article.id} style={{ marginBottom: 40 }} className="divHome">
           <h2>{article.payload.theme}</h2>
+          <p style={{ fontWeight: 'bold' }}>{article.obs}</p>
 
           <pre>{JSON.stringify(article.payload, null, 2)}</pre>
 
